@@ -37,6 +37,7 @@
         <hr>
         <section id="lastmeet">
             <h2>Last Meeting</h2>
+            <img src="media/last_meeting.jpg" alt="Stock photo of team members sitting at a round meeting table" width="200" height="250">
         </section>
         <hr>
         <section id="agenda">
@@ -56,11 +57,94 @@
                 <p><i>Meeting Notes content sourced from <a href="https://notejoy.com/resources/meeting-minutes-template">notejoy</a>.</i></p>
 
         </section>
+
+        <section id="misc">
+            <details>
+                <summary>Meeting Notes Summary from <time datetime="2025-04-15">April 15, 2025</time> </summary>
+                <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
+            </details>
+
+            <video width="320" height="240" controls autoplay>
+                <source src="media/sunset_and_waves(1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+              
+              
+            <audio controls autoplay muted>
+                <source src="media/ocean-waves.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+          
         
     </main>
+
     <hr>
+
     <footer>
-        <summary></summary>
+
+        <h2>Contact Me!</h2>
+    
+        <form action="https://httpbin.org/post" method="POST">
+            <fieldset>
+            <legend>Personal Information</legend>
+            <label>Name
+                <input type="text" id="your-name" name="your-name" required>
+            </label>
+            <br>
+            <label>Email
+                <input type="email" id="your-email" name="your-email" required>
+            </label>
+            <p>Please fill out both <kbd>name</kbd> and <kbd>email</kbd> fields before submitting.</p>
+            <br>
+            <label>Occupation
+                <select name="occupation" id="occupation">
+                <option value="recruiter">Recruiter</option>
+                <option value="soft-engineer">Software Engineer</option>
+            
+                <optgroup label="Student">
+                    <option value="high-school">High School</option>
+                    <option value="college">College</option>
+                    <option value="other-student">Other</option>
+                </optgroup>
+            
+                <option value="other">Other</option>
+                </select>
+            </label>
+            <br>
+            <label>Location
+                <input list="cities" id="city" name="city">
+                <datalist id="cities">
+                <option value="New York">
+                <option value="San Diego">
+                <option value="San Jose">
+                <option value="San Francisco">
+                <option value="Los Angeles">
+                <option value="Chicago">
+                <option value="Houston">
+                <option value="Phoenix">
+                </datalist>
+            </label>
+            <br>
+            </fieldset>
+
+            <fieldset>
+            <legend>Other</legend>
+            <label>Message <br>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </label>
+            </fieldset>
+
+            <dialog id="incompleteForm">
+            <p>Please fill out both <kbd>name</kbd> and <kbd>email</kbd> fields before submitting.</p>
+            <button id="closeDialog">Close</button>
+            </dialog>
+
+            <button>Send</button>
+        </form>
+
+        <p>Thank you for getting in touch!</p>
+  
     </footer>
 
   </body>
