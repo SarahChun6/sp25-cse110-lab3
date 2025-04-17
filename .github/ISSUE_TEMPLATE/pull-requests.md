@@ -2,8 +2,8 @@
 name: Pull Requests
 about: Go through the process of making my first pull request
 title: ''
-labels: ''
-assignees: ''
+labels: enhancement, good first issue
+assignees: SarahChun6
 
 ---
 
