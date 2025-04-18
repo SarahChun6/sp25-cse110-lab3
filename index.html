@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Lab 2: HTML Meeting Notes</title>
     <link rel="icon" href="https://schun-portfolio.netlify.app/files/favicon.ico">
+    <link rel="stylesheet" href="styles.css" media="screen" type="text/css" />
+
   </head>
   <body>
     <header>
         <div id="headergroup">
             <h1>Lab 2: HTML Meeting Notes</h1>
-           <h2>Meeting Topic: Brainstorming, Check-ins, Documentation</h2>
-            <h3><time datetime="2025-04-15">April 15, 2025</time> documented by <span id="signature">Sarah Chun</span></h3>
+            <h2>Meeting Topic: Brainstorming, Check-ins, Documentation</h2>
+            <h3><time datetime="2025-04-18">April 18, 2025</time> documented by <span id="signature">Sarah Chun</span></h3>
         </div>
 
-        <hr>
+        <hr class="html-only">
 
         <nav>
             <ul>
@@ -24,9 +26,9 @@
             </ul>
         </nav>  
     </header>
-    <hr>
-    <main>
-        <section id="attendees">
+    <hr class="html-only">
+    <main class="content-block">
+        <section id="attendees" class="intro">
             <h2>Attendees</h2>
             <ol>
                 <li>Member A</li>
@@ -34,116 +36,119 @@
                 <li>Member C</li>
             </ol>
         </section>
+
         <hr>
-        <section id="lastmeet">
+
+        <section id="lastmeet" class="intro">
             <h2>Last Meeting</h2>
             <img src="media/last_meeting.jpg" alt="Stock photo of team members sitting at a round meeting table" width="200" height="250">
         </section>
+
         <hr>
-        <section id="agenda">
-            <h2>Agenda</h2>
-            <p><b>What are meeting minutes for?</b> <br> 
-                Meeting minutes are the notes that capture what happened at a meeting! 
-                Different than a meeting agenda, it records the decisions made and actions 
-                requested by the group. Despite the team, they are not a minute-by-minute 
-                record but include the key details that the team will want to know. It's 
-                important in meeting minutes to capture information such as decisions made, 
-                next steps, action items and who is responsible. 
-                <strong><em>Minutes are the record of who was there and what happened. </em></strong>
-                They are an important source of information for people who were unable to attend 
-                or looking back to reflect on what happened. They're also an incredibly effective  
-                tool to notify or remind people of tasks assigned to them or timelines to keep everyone on track.
-                </p>
-                <p><i>Meeting Notes content sourced from <a href="https://notejoy.com/resources/meeting-minutes-template">notejoy</a>.</i></p>
-
-        </section>
-
-        <section id="misc">
-            <details>
-                <summary>Meeting Notes Summary from <time datetime="2025-04-15">April 15, 2025</time> </summary>
-                <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
-            </details>
-
+        
+        <section id="misc" class="intro">
             <video width="320" height="240" controls autoplay>
                 <source src="media/sunset_and_waves.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-              
-              
+                            
             <audio controls autoplay muted>
                 <source src="media/ocean-waves.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </section>
-          
-        
     </main>
 
-    <hr>
+    <hr class="html-only">
+
+    <section id="agenda" class="content-block">
+        <h2>Agenda</h2>
+        <p><b>What are meeting minutes for?</b> <br> 
+            Meeting minutes are the notes that capture what happened at a meeting! 
+            Different than a meeting agenda, it records the decisions made and actions 
+            requested by the group. Despite the team, they are not a minute-by-minute 
+            record but include the key details that the team will want to know. It's 
+            important in meeting minutes to capture information such as decisions made, 
+            next steps, action items and who is responsible. 
+            <strong><em>Minutes are the record of who was there and what happened. </em></strong>
+            They are an important source of information for people who were unable to attend 
+            or looking back to reflect on what happened. They're also an incredibly effective  
+            tool to notify or remind people of tasks assigned to them or timelines to keep everyone on track.
+            </p>
+            <p><i>Meeting Notes content sourced from <a href="https://notejoy.com/resources/meeting-minutes-template">notejoy</a>.</i></p>
+
+        <details>
+            <summary>Meeting Notes Summary from <time datetime="2025-04-15">April 15, 2025</time> </summary>
+            <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
+        </details>
+    </section>          
+        
+    <hr class="html-only">
 
     <footer>
+        <div id="contact-form">
+            <h2>Contact Me!</h2>
+        
+            <form action="https://httpbin.org/post" method="POST">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>Name
+                        <input type="text" id="your-name" name="your-name" required>
+                    </label>
+                    <br>
+                    <label>Email
+                        <input type="email" id="your-email" name="your-email" required>
+                    </label>
+                    <p>Please fill out both <kbd>name</kbd> and <kbd>email</kbd> fields before submitting.</p>
+                    <br>
+                    <label>Occupation
+                        <select name="occupation" id="occupation">
+                        <option value="recruiter">Recruiter</option>
+                        <option value="soft-engineer">Software Engineer</option>
+                    
+                        <optgroup label="Student">
+                            <option value="high-school">High School</option>
+                            <option value="college">College</option>
+                            <option value="other-student">Other</option>
+                        </optgroup>
+                    
+                        <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>Location
+                        <input list="cities" id="city" name="city">
+                        <datalist id="cities">
+                        <option value="New York">
+                        <option value="San Diego">
+                        <option value="San Jose">
+                        <option value="San Francisco">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                        <option value="Houston">
+                        <option value="Phoenix">
+                        </datalist>
+                    </label>
+                    <br>
+                </fieldset>
 
-        <h2>Contact Me!</h2>
-    
-        <form action="https://httpbin.org/post" method="POST">
-            <fieldset>
-            <legend>Personal Information</legend>
-            <label>Name
-                <input type="text" id="your-name" name="your-name" required>
-            </label>
-            <br>
-            <label>Email
-                <input type="email" id="your-email" name="your-email" required>
-            </label>
-            <p>Please fill out both <kbd>name</kbd> and <kbd>email</kbd> fields before submitting.</p>
-            <br>
-            <label>Occupation
-                <select name="occupation" id="occupation">
-                <option value="recruiter">Recruiter</option>
-                <option value="soft-engineer">Software Engineer</option>
-            
-                <optgroup label="Student">
-                    <option value="high-school">High School</option>
-                    <option value="college">College</option>
-                    <option value="other-student">Other</option>
-                </optgroup>
-            
-                <option value="other">Other</option>
-                </select>
-            </label>
-            <br>
-            <label>Location
-                <input list="cities" id="city" name="city">
-                <datalist id="cities">
-                <option value="New York">
-                <option value="San Diego">
-                <option value="San Jose">
-                <option value="San Francisco">
-                <option value="Los Angeles">
-                <option value="Chicago">
-                <option value="Houston">
-                <option value="Phoenix">
-                </datalist>
-            </label>
-            <br>
-            </fieldset>
+                <fieldset>
+                    <legend>Other</legend>
+                    <label>Message <br>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </label>
+                    </fieldset>
 
-            <fieldset>
-            <legend>Other</legend>
-            <label>Message <br>
-                <textarea id="message" name="message" rows="5"></textarea>
-            </label>
-            </fieldset>
+                    <dialog id="incompleteForm">
+                    <p>Please fill out both <kbd>name</kbd> and <kbd>email</kbd> fields before submitting.</p>
+                    <button id="closeDialog">Close</button>
+                </dialog>
 
-            <dialog id="incompleteForm">
-            <p>Please fill out both <kbd>name</kbd> and <kbd>email</kbd> fields before submitting.</p>
-            <button id="closeDialog">Close</button>
-            </dialog>
+                <button>Send</button>
+            </form>
 
-            <button>Send</button>
-        </form>
-
-        <p>Thank you for getting in touch!</p>
+            <p>Thank you for getting in touch!</p>
+        </div>
   
     </footer>
 

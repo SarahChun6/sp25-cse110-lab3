@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --header-background-color: rgb(153, 204, 255); /* Light sky blue */
+    --body-background-color: #D9D9D9; /* Light gray */
+    --text-color: color(display-p3 0.2 0.2 0.2); /* Dark gray */
+    --font-primary: 'Poppins', Arial, sans-serif;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    min-height: 95vh;
+    min-height: 95dvh; /* viewport height */
+    background-color: var(--body-background-color); 
+}
+  
+header, footer {
+    background-color: #6495ED;
+    color: var(--text-color);
+    text-align: center;
+    /*padding: 1rem;*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+hr{
+    border: 1px solid var(--text-color);
+}
+
+hr.html-only{
+    display: none;
+}
+
+a {
+    color: color-mix(in display-p3, var(--text-color) 90%, var(--header-background-color) 10%);
+}
+
+* a:hover {
+    color: color-mix(in display-p3, var(--text-color) 60%, var(--header-background-color) 20%);
+    text-decoration: none;
+}
+
+#headergroup{
+    border: 0.2em solid black;
+}
+
+h2 ~ h3{
+    font-size: 1rem;
+    font-weight: normal;
+}
+  
+@scope (nav) {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 1rem;
+      position: sticky;
+    }
+    ul li {
+      display: inline-block;
+      padding: 0.625rem 1.25rem;
+      transition: font-size 0.3s ease-in-out;
+    }
+    ul li a:hover {
+      font-size: 120%;
+    }
+}
+
+main {
+    /*display: grid;
+    grid-template-columns: 0.75fr 20px 1fr 20px 1.25fr;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    color: var(--text-color);
+}
+
+
+section{
+    display: grid;
+    justify-content: center; 
+    padding: 2em;
+    min-width: 25dvh;
+}
+
+main > hr {
+    margin: 0.1em;
+}
+
+.content-block{
+    /*margin: 2rem;*/
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    background-color:  hsl(210, 68%, 73%);
+    border: 0.2em solid navy;
+}
+
+#contact-form{    
+    border-style: solid;
+    border-color: black;
+    border-width: 0.2em;
+    display: grid;
+    justify-content: center; 
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+fieldset{
+    margin: 0 2rem;
+    max-width: 50dvw;
+}
+  
+button {
+    background: var(--header-background-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    padding: 0.75em 1.5em;
+    margin: auto;    
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+  
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active{
+    background: color-mix(in display-p3, var(--header-background-color) 80%, var(--text-color) 20%);
+}
+  
+button:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+/*Responsiveness*/
+@media (max-width: 768px) {
+    main {
+      flex: none;
+      width: 90%;
+    }
+}
