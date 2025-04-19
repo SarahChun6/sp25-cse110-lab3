@@ -10,14 +10,15 @@
 
 html {
     font-size: 16px;
+    color: var(--text-color);
 }
 
 body {
     font-family: var(--font-primary);
     /*display: flex;*/
     /*flex-direction: column;*/
-    min-height: 95vh;
-    min-height: 95dvh; /* viewport height */
+    height: 95vh; /* viewport height fallback */
+    height: 95dvh; 
     background-color: var(--body-background-color); 
 }
   
@@ -58,8 +59,19 @@ h2 ~ h3{
     font-size: 1rem;
     font-weight: normal;
 }
+
+h1 + h2 {
+    font-size: 1rem;
+}
+
+p:has(b),
+p:has(strong),
+p:has(i),
+p:has(em){
+    font-size: 1.25em;
+}
   
-@scope (nav) {
+nav {
     ul {
       display: flex;
       flex-direction: row;
@@ -127,6 +139,10 @@ main > hr {
 fieldset{
     margin: 0 2rem;
     max-width: 50dvw;
+}
+
+label:has(input[required]){
+    color: black;
 }
   
 button {
